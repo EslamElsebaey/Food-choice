@@ -421,6 +421,9 @@ a:focus, a:hover {
   .item-desc .category-name {
     font-size: 16px;
   }
+  html[dir=rtl] .item-desc .category-name {
+    font-size: 15px;
+  }
   .category-item {
     display: flex;
     align-items: center;
