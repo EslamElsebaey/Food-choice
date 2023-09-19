@@ -1,0 +1,265 @@
+
+.shopByDeal{
+    padding: 90px 0 110px 0 ;
+    .title-text-sec{
+        h2{
+            color: #000;
+            margin-bottom: 30px;
+        }
+    }
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after , .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+        content:  "";
+    }
+    .swiper-button-next, .swiper-button-prev{
+        display: none;
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+        bottom: -50px;
+    }
+    .swiper-pagination-bullet{
+        opacity: 0.502;
+        background-color: #000000;
+    }
+    .swiper-pagination-bullet-active{
+        opacity: 1;
+        background-color: #8dc63f;
+    }
+}
+
+
+.shopByDeal{
+    .product-item{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #ffffff;
+    }
+    .like{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        filter: drop-shadow(0 0 7.5px rgba(0,0,0,0.05));
+        background-color: #ffffff;
+        position: absolute;
+        top: 10px;
+        inset-inline-start: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all linear .3s;
+        &:hover{
+            background-color: #f53737;
+            i {
+                color: #fff;
+            }
+        }
+        i{
+            transition: color linear .2s;
+            font-size: 20px;
+            color: #000000;
+            text-align: center;
+        }
+    }
+    .item-desc{
+        text-align: center;
+        width: 100%;
+        > a{
+            text-decoration: none;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        .brand-name {
+          
+            height: 41px;
+            font-size: 14px;
+            line-height: 22px;
+            text-transform: uppercase;
+            color: #000000;
+            text-align: center;  
+            margin: 0;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            font-weight: 400;
+            transition: all linear .2s;
+            margin-bottom: 15px;
+            &:hover{
+                color: $main-color;
+            }
+        }
+    }
+    .price{
+        width: 100%;
+       justify-content: center;
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        .current-price{
+            font-size: 16px;
+            text-transform: uppercase;
+            color: #000000;
+            font-weight: 700;
+            margin-bottom: 0;
+            margin-inline-end: 8px;
+        }
+        .deleted{
+            font-size: 14px;
+            text-decoration: line-through;
+            text-transform: uppercase;
+            color: #4d4d4d;
+            font-weight: 300;
+        }
+    }
+    .add{
+        width: 360px;
+        height: 55px;
+        border-radius: 5px;
+        background-color: #0083ca;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-weight: 700;
+        text-align: center;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        transition: all linear .2s;
+        &:hover{
+            // background-color: #000;
+            background-color: #8dc63f;
+            color: #ffffff;
+        }
+        i {
+            font-size: 26px;
+            color: #ffffff;
+            line-height: 17px;
+        }
+        span{
+            margin-inline-start: 7px;
+            line-height: 28px;
+        }
+    }
+    
+    .img-holder{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 360px;
+        height: 424px;
+        overflow: hidden;
+        background-color: #f7f7f7;
+        position: relative;
+        width: 100%;
+    }
+    
+}
+
+
+@include max-992 {
+    .shopByDeal .img-holder{
+        height: auto;
+        padding: 20px 0 ;
+    }
+    .shopByDeal .img-holder img{
+        height: 220px;
+    }
+}
+
+
+@include max-768 {
+    .shopByDeal .item-desc .brand-name{
+        margin-bottom: 12px;
+        padding: 0 5px;
+    }
+    .shopByDeal .add{
+        font-size: 16px;
+        height: 45px;
+        i{
+            line-height: normal; 
+            font-size: 24px;
+        }
+    }
+    .shopByDeal .add span{
+        margin-inline-start: 4px;
+        line-height: initial;
+    }
+    .shopByDeal .swiper-horizontal > .swiper-pagination-bullets, .shopByDeal .swiper-pagination-bullets.swiper-pagination-horizontal, .shopByDeal .swiper-pagination-custom, .shopByDeal .swiper-pagination-fraction{
+        bottom: -55px;
+    }
+    .shopByDeal{
+        padding: 50px 0 80px 0;
+    }
+    .shopByDeal .price{
+        margin-bottom: 17px;
+    }
+    .shopByDeal .price{
+        justify-content: flex-start;
+    }
+    .item-desc{
+        margin-top: 14px;
+    }
+    .shopByDeal .like i{
+        font-size: 18px;
+    }
+    .shopByDeal .like{
+        width: 30px;
+        height: 30px;
+    }
+    .shopByDeal .img-holder img{
+        height: 120px;
+    }
+    .shopByDeal .img-holder{
+       padding: 45px 0 20px 0 ;
+    }
+    .like{
+        width: 30px;
+        height: 30px;
+    }
+   
+    .price .current-price , .price .deleted{
+        font-size: 15px;
+    }
+    .shopByDeal .price .current-price {
+        margin-inline-end: 0;
+        margin-bottom: 4px;
+    }
+    
+    .price{
+        flex-direction: column;
+        line-height: normal;
+         height: 50px;
+         justify-content: initial;
+         margin-bottom: 13px;
+    }
+    .item-desc .brand-name{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+@include min-768 {
+  
+    .shopByDeal{
+        .img-holder{
+            &:hover{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    .shopByDeal{
+        .img-holder img{
+            transition: all linear .2s;
+        }
+    }
+   
+}

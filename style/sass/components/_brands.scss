@@ -1,0 +1,74 @@
+.shopByBrand{
+padding: 90px 0 110px 0;
+height: 443px;
+background-color: #f7f7f7;
+.title-text-sec h2{
+    color: #000;
+    margin-bottom: 35px;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after , .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+    content: "";
+}
+.swiper-button-next, .swiper-button-prev{
+    display: none;
+}
+
+}
+
+.brand-item{
+    a{
+        display: block;
+        width: 100% ;
+        
+    }
+}
+.brands-parent{
+    position: relative;
+    .clients-item{
+        > a {
+            display: block;
+            img{
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+.brand-item {
+    a img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.shopByBrand{
+    .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+        bottom: -55px;
+    }
+    .swiper-pagination-bullet{
+        background-color: #000;
+        opacity: 0.502;
+    }
+    .swiper-pagination-bullet-active{
+       background-color: #8dc63f;
+        opacity: 1;
+    }
+}
+
+
+@include max-992{
+    .shopByBrand{
+        height: auto;
+    }
+}
+
+
+@include max-768 {
+  
+    .shopByBrand{
+        padding: 50px 0 90px;
+    }
+    .shopByBrand .swiper-horizontal > .swiper-pagination-bullets, .clients .swiper-pagination-bullets.swiper-pagination-horizontal, .clients .swiper-pagination-custom, .clients .swiper-pagination-fraction{
+        bottom: -45px;
+    }
+}
