@@ -1696,6 +1696,21 @@ nav .nav-ul > li a:hover::after {
   .cart {
     margin-inline-end: 0;
   }
+  .li-drop > a::after {
+    font-size: 16px;
+    content: "\f107";
+    transition: all linear 0.3s;
+    font-family: "line Awesome free";
+    position: relative;
+    font-weight: 900;
+    color: #000;
+    opacity: 1;
+    transform: unset;
+    background-color: unset;
+    width: auto;
+    top: unset;
+    height: unset;
+  }
   nav {
     overflow-y: auto;
     position: fixed;
@@ -1735,12 +1750,6 @@ nav .nav-ul > li a:hover::after {
   }
   nav .nav-ul > li > a:hover::after {
     color: #000;
-  }
-  nav .nav-ul > li > a::after {
-    transition: all linear 0.2s;
-    height: auto;
-    color: #000;
-    font-size: 16px;
   }
   .closeSearh-btn {
     inset-inline-end: 23px;
