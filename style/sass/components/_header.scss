@@ -586,7 +586,9 @@ header{
 }
     
 @include max-768 {
-    
+    .number{
+        top: -6px;
+    }
     .openMySearch{
         margin-inline-start: 0;
     }
