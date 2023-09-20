@@ -26,7 +26,7 @@
     }
     display: flex;
     flex-direction: column;
-    h3{
+    .mega-main-ancor{
         font-size: 16px;
         line-height: 28px;
         text-transform: uppercase;
@@ -34,6 +34,11 @@
         font-weight: 700;
         margin: 0;
         margin-bottom: 25px;
+        
+       
+       
+    }
+    .line-underlined{
         position: relative;
         &::after{
             content: "";
@@ -44,7 +49,6 @@
             bottom: -7px;
             left: 0;
         }
-       
     }
   
     ul li a {
@@ -102,7 +106,7 @@
             }
         }
     } 
-   .mega-item  h3 {
+   .mega-item  .mega-main-ancor {
     width: 100%;
     font-size: 15px;
     text-align: start;
@@ -130,23 +134,23 @@
         padding: 0;
         width: 100%;
     }
-    .mega-item h3{
+    .mega-item .mega-main-ancor{
         position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        &::after{
-            content: "\f107";
-            font-size: 14px;
-            transition: all linear .3s;
-            font-family: "line Awesome free";
-            position: relative;
-            width: unset;
-            height: unset;
-            background-color: transparent;
-            bottom:unset;
-            left: unset;
-        }
+    }
+    .mega-item .line-underlined::after{
+        content: "\f107";
+        font-size: 14px;
+        transition: all linear .3s;
+        font-family: "line Awesome free";
+        position: relative;
+        width: unset;
+        height: unset;
+        background-color: transparent;
+        bottom:unset;
+        left: unset;
     }
    
    

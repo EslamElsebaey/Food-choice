@@ -1179,7 +1179,7 @@ footer .footer-title {
   flex-wrap: wrap;
   max-height: 395px;
 }
-.mega-item h3 {
+.mega-item .mega-main-ancor {
   font-size: 16px;
   line-height: 28px;
   text-transform: uppercase;
@@ -1187,9 +1187,11 @@ footer .footer-title {
   font-weight: 700;
   margin: 0;
   margin-bottom: 25px;
+}
+.mega-item .line-underlined {
   position: relative;
 }
-.mega-item h3::after {
+.mega-item .line-underlined::after {
   content: "";
   width: 100%;
   height: 1px;
@@ -1249,7 +1251,7 @@ footer .footer-title {
   .mega-item ul li:last-of-type {
     padding-bottom: 20px;
   }
-  .mega-item h3 {
+  .mega-item .mega-main-ancor {
     width: 100%;
     font-size: 15px;
     text-align: start;
@@ -1272,13 +1274,13 @@ footer .footer-title {
     padding: 0;
     width: 100%;
   }
-  .mega-item h3 {
+  .mega-item .mega-main-ancor {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .mega-item h3::after {
+  .mega-item .line-underlined::after {
     content: "\f107";
     font-size: 14px;
     transition: all linear 0.3s;
@@ -1613,6 +1615,10 @@ nav .nav-ul > li a:hover::after {
   visibility: visible;
 }
 
+html[dir=rtl] .li-drop > a::after {
+  transform: translateX(74px);
+}
+
 .account-text:hover .account-details {
   opacity: 1;
   visibility: visible;
@@ -1710,6 +1716,9 @@ nav .nav-ul > li a:hover::after {
     width: auto;
     top: unset;
     height: unset;
+  }
+  html[dir=rtl] .li-drop > a::after {
+    transform: unset;
   }
   nav {
     overflow-y: auto;
