@@ -842,11 +842,8 @@ a:focus, a:hover {
   color: #ffffff;
 }
 
-.feature-item p a {
-  text-decoration: none;
-}
 .feature-item p a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 html[dir=rtl] .feature-item h3 {
@@ -1399,7 +1396,7 @@ footer .footer-title {
 
 nav > .nav-ul > li:first-child {
   padding: 31px;
-  margin-inline-end: 91px;
+  margin-inline-end: 30px;
 }
 
 .number {
@@ -1656,6 +1653,9 @@ nav .nav-ul > li a:hover::after {
   }
 }
 @media only screen and (max-width: 991px) {
+  nav > .nav-ul > li:first-child {
+    padding: 0;
+  }
   .logo {
     position: absolute;
     left: 50%;
@@ -1849,7 +1849,7 @@ nav .nav-ul > li a:hover::after {
 }
 
 .sticky-header {
-  padding: 0px 30px;
+  padding-inline-end: 30px;
 }
 .sticky-header nav > .nav-ul > li {
   height: 70px;

@@ -50,9 +50,8 @@ padding: 40px 0 ;
     }
 }
 .feature-item p a {
-    text-decoration: none;
     &:hover{
-        text-decoration: none;
+        text-decoration: underline;
     }
 }
 

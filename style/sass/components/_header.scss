@@ -118,7 +118,7 @@ margin-inline-end: 5px;
 
 nav > .nav-ul > li:first-child{
     padding: 31px;
-    margin-inline-end: 91px;
+    margin-inline-end: 30px;
 }
 
 
@@ -430,6 +430,9 @@ nav .nav-ul > li a:hover::after{
 }
 
 @include max-992 {
+    nav > .nav-ul > li:first-child{
+        padding: 0;
+    }
     .logo {
         position: absolute;
         left: 50%;
@@ -648,7 +651,7 @@ header{
     nav > .nav-ul > li{
         height: 70px;
     }
-    padding: 0px 30px;
+    padding-inline-end: 30px;
     .logo img {
         height: 50px;
         width: auto;
