@@ -151,7 +151,7 @@ const brands = new Swiper('.shopByBrand .swiper', {
   // Responsive breakpoints
   breakpoints: {
     350: {
-      slidesPerView: 2,
+      slidesPerView: 3,
       spaceBetween: 15
     },
     500: {

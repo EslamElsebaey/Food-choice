@@ -166,8 +166,8 @@ a:focus, a:hover {
 /*preloader*/
 .totop-whatsapp-holder {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 10px;
   z-index: 10;
   display: flex;
   align-items: center;
@@ -187,7 +187,7 @@ a:focus, a:hover {
   font-size: 25px;
 }
 .totop-whatsapp-holder .toTop {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   padding: 0;
   filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.15));
   background-color: #ffffff;
@@ -250,6 +250,7 @@ a:focus, a:hover {
 }
 .mainBanner .swiper-button-next:hover, .mainBanner .swiper-button-prev:hover {
   background-color: #0083ca;
+  border: #0083ca;
 }
 .mainBanner .swiper-button-prev, .mainBanner .swiper-rtl .swiper-button-next {
   left: 30px;
@@ -841,6 +842,13 @@ a:focus, a:hover {
   color: #ffffff;
 }
 
+.feature-item p a {
+  text-decoration: none;
+}
+.feature-item p a:hover {
+  text-decoration: none;
+}
+
 html[dir=rtl] .feature-item h3 {
   font-size: 17px;
   margin-bottom: 8px;
@@ -1182,11 +1190,9 @@ footer .footer-title {
   font-weight: 700;
   margin: 0;
   margin-bottom: 25px;
-}
-.mega-item h3.title-underlined {
   position: relative;
 }
-.mega-item h3.title-underlined::after {
+.mega-item h3::after {
   content: "";
   width: 100%;
   height: 1px;
@@ -1269,13 +1275,13 @@ footer .footer-title {
     padding: 0;
     width: 100%;
   }
-  .mega-item h3.title-underlined {
+  .mega-item h3 {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .mega-item h3.title-underlined::after {
+  .mega-item h3::after {
     content: "\f107";
     font-size: 14px;
     transition: all linear 0.3s;
@@ -1303,6 +1309,7 @@ footer .footer-title {
 .logo a img {
   transition: all linear 0.4s;
   height: 83px;
+  width: 293px;
 }
 
 .overflowHidden {
@@ -1388,6 +1395,11 @@ footer .footer-title {
 
 .cart div {
   position: relative;
+}
+
+nav > .nav-ul > li:first-child {
+  padding: 31px;
+  margin-inline-end: 91px;
 }
 
 .number {
@@ -1524,7 +1536,7 @@ html[dir=ltr] .search-holder input {
 
 header {
   background-color: #0083ca;
-  padding: 15px 30px;
+  padding-inline-end: 30px;
   transition: all linear 0.3s;
   position: fixed;
   top: 0;
@@ -1543,10 +1555,6 @@ nav {
   justify-content: space-between;
 }
 
-nav > .nav-ul > li {
-  margin-inline-end: 112px;
-}
-
 @media screen and (max-width: 1300px) {
   nav > .nav-ul > li {
     margin-inline-end: 80px;
@@ -1560,6 +1568,8 @@ nav > .nav-ul li:last-child {
   margin-inline-end: 0;
 }
 nav > .nav-ul > li {
+  transition: all linear 0.3s;
+  height: 113px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1584,17 +1594,22 @@ nav .nav-ul > li a:hover::after {
   color: #fff;
 }
 
-.li-drop > a::after {
-  content: "\f107";
-  font-family: "line Awesome free";
-  font-weight: 900;
-  position: relative;
-  color: #fff;
-  font-size: 11px;
+.li-drop {
+  height: 113px;
 }
-.li-drop:hover > a::before {
+.li-drop > a::after {
+  content: "";
+  background-color: #8dc63f;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  position: absolute;
+  transform: translateX(-69px);
+  z-index: -1;
+  opacity: 0;
+}
+.li-drop:hover > a::after {
   opacity: 1;
-  visibility: visible;
 }
 .li-drop:hover .mega-menu {
   opacity: 1;
@@ -1631,15 +1646,28 @@ nav .nav-ul > li a:hover::after {
 @media only screen and (max-width: 1199px) {
   .logo a img {
     height: 60px;
+    width: auto;
   }
   body {
-    padding-top: 90px;
+    padding-top: 113px;
   }
   nav > .nav-ul > li {
     margin-inline-end: 60px;
   }
 }
 @media only screen and (max-width: 991px) {
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .header-content {
+    justify-content: flex-start;
+  }
+  .cart-bars-holder {
+    position: absolute;
+    inset-inline-end: 0;
+  }
   .search-holder-parent {
     height: 70px;
   }
@@ -1654,9 +1682,10 @@ nav .nav-ul > li a:hover::after {
   }
   .logo a img {
     height: 50px;
+    width: auto;
   }
   body {
-    padding-top: 70px;
+    padding-top: 68px;
   }
   .openMySearch, .account-text, .cart {
     margin-inline-start: 25px;
@@ -1685,6 +1714,7 @@ nav .nav-ul > li a:hover::after {
     text-align: center;
   }
   nav .nav-ul > li {
+    height: auto;
     margin-inline-end: 50px;
     display: block;
     margin-bottom: 20px;
@@ -1746,16 +1776,25 @@ nav .nav-ul > li a:hover::after {
   }
   .bars {
     margin-inline-start: 20px;
+    padding: 7px 0;
   }
   header {
-    padding: 10px 30px;
+    padding: 15px 30px;
   }
   .header-content {
     position: relative;
     width: 100%;
   }
 }
+.cart-bars-holder {
+  display: flex;
+  align-items: center;
+}
+
 @media only screen and (max-width: 767px) {
+  .openMySearch {
+    margin-inline-start: 0;
+  }
   .search-holder-input input::-moz-placeholder {
     font-size: 17px;
   }
@@ -1765,7 +1804,7 @@ nav .nav-ul > li a:hover::after {
   .control-section .whatsapp-icon {
     display: none;
   }
-  .cart, .account-text, .openMySearch {
+  .cart, .account-text {
     margin-inline-start: 20px;
   }
   body {
@@ -1810,10 +1849,14 @@ nav .nav-ul > li a:hover::after {
 }
 
 .sticky-header {
-  padding: 8px 30px;
+  padding: 0px 30px;
+}
+.sticky-header nav > .nav-ul > li {
+  height: 70px;
 }
 .sticky-header .logo img {
   height: 50px;
+  width: auto;
 }
 
 .totop-whatsapp-holder .showToTop {

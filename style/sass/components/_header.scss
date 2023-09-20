@@ -15,6 +15,7 @@
     img {
         transition: all linear .4s;
         height: 83px;
+        width: 293px;
     }
 }
 
@@ -113,6 +114,11 @@ margin-inline-end: 5px;
 }
 .cart div {
     position: relative;
+}
+
+nav > .nav-ul > li:first-child{
+    padding: 31px;
+    margin-inline-end: 91px;
 }
 
 
@@ -257,7 +263,7 @@ html[dir="ltr"]{
 
 header{
     background-color: $main-color;    
-    padding: 15px 30px;
+    padding-inline-end: 30px;
     transition: all linear .3s;
     position: fixed;
     top: 0;
@@ -277,9 +283,7 @@ nav{
     justify-content: space-between;
 }
 
-nav > .nav-ul > li{
-    margin-inline-end: 112px;
-}
+
 
 @media screen and (max-width : 1300px ) {
     nav > .nav-ul > li{
@@ -295,7 +299,8 @@ nav{
             margin-inline-end: 0;
         }
        > li{
-            
+        transition: all linear .3s;
+            height: 113px;
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -323,21 +328,24 @@ nav .nav-ul > li a:hover::after{
 }
 
 .li-drop{
+    height: 113px;
     // padding: 5px 0;
     > a {
         &::after{
-            content: "\f107";
-            font-family: "line Awesome free";
-            font-weight: 900;
-            position: relative;
-            color: #fff;
-            font-size: 11px;
+            content: "";
+            background-color: #8dc63f;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            position: absolute;
+            transform: translateX(-69px);
+            z-index: -1;
+            opacity: 0;
         }
     }
     &:hover{
-        & > a::before{
+        & > a::after{
             opacity: 1;
-            visibility: visible;
         }
         .mega-menu{
             opacity: 1;
@@ -411,9 +419,10 @@ nav .nav-ul > li a:hover::after{
 @include max-1200{
     .logo a img{
         height: 60px;
+        width: auto;
     }
     body{
-        padding-top: 90px;
+        padding-top: 113px;
     }
     nav > .nav-ul > li{
         margin-inline-end: 60px;
@@ -421,6 +430,19 @@ nav .nav-ul > li a:hover::after{
 }
 
 @include max-992 {
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .header-content{
+        justify-content: flex-start;
+    }
+    .cart-bars-holder{
+      
+        position: absolute;
+        inset-inline-end: 0;
+    }
     .search-holder-parent{
         height: 70px;
     }
@@ -437,9 +459,10 @@ nav .nav-ul > li a:hover::after{
     }
     .logo a img{
         height: 50px;
+        width: auto;
     }
     body{
-        padding-top: 70px;
+        padding-top: 68px;
     }
     .openMySearch , .account-text , .cart  {
         margin-inline-start: 25px;
@@ -467,6 +490,7 @@ nav .nav-ul > li a:hover::after{
         z-index: 200;
         text-align: center;
         .nav-ul > li{
+            height: auto;
             margin-inline-end: 50px;
             display: block;
             margin-bottom: 20px;
@@ -528,23 +552,33 @@ nav .nav-ul > li a:hover::after{
     }
     .bars {
     margin-inline-start: 20px;
+    padding: 7px 0;
     }
   
        
-        header{
-            padding: 10px 30px;
-        }
-         .header-content{
-            position: relative;
-            width: 100%;
-        }
+header{
+    padding: 15px 30px;
+}
+    .header-content{
+    position: relative;
+    width: 100%;
+}
        
        
 }
 
-
+.cart-bars-holder{
+    display: flex;
+    align-items: center;
+}
     
 @include max-768 {
+    
+    .openMySearch{
+        margin-inline-start: 0;
+    }
+   
+   
      .search-holder-input input::placeholder{
         font-size: 17px;
     }
@@ -553,7 +587,7 @@ nav .nav-ul > li a:hover::after{
             display: none;
         }
     }
-    .cart , .account-text , .openMySearch {
+    .cart , .account-text  {
         margin-inline-start: 20px;
     }
     body{
@@ -611,9 +645,13 @@ nav .nav-ul > li a:hover::after{
 
 
 .sticky-header{
-    padding: 8px 30px;
+    nav > .nav-ul > li{
+        height: 70px;
+    }
+    padding: 0px 30px;
     .logo img {
         height: 50px;
+        width: auto;
     }
   }
 

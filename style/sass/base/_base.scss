@@ -134,8 +134,8 @@ a:focus, a:hover{
 
 .totop-whatsapp-holder{
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 10px;
   z-index: 10;
   display: flex;
   align-items: center;
@@ -154,7 +154,7 @@ a:focus, a:hover{
     }
   }
   .toTop{
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   padding: 0;
   filter: drop-shadow(0 0 12px rgba(0,0,0,0.15));
   background-color: #ffffff;

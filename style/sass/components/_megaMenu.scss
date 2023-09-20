@@ -34,9 +34,6 @@
         font-weight: 700;
         margin: 0;
         margin-bottom: 25px;
-       
-    }
-    h3.title-underlined{
         position: relative;
         &::after{
             content: "";
@@ -47,7 +44,9 @@
             bottom: -7px;
             left: 0;
         }
+       
     }
+  
     ul li a {
         font-size: 16px;
         line-height: 28px;
@@ -131,7 +130,7 @@
         padding: 0;
         width: 100%;
     }
-    .mega-item h3.title-underlined{
+    .mega-item h3{
         position: relative;
         display: flex;
         align-items: center;
