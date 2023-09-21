@@ -360,6 +360,12 @@ html[dir="rtl"]{
         transform: translateX(74px);
     }
 }
+.ancor-hover{
+    transition: all linear .2s;
+    &:hover{
+        color: #0083ca;
+    }
+}
 
 
 

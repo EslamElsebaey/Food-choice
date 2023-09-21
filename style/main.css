@@ -1619,6 +1619,13 @@ html[dir=rtl] .li-drop > a::after {
   transform: translateX(74px);
 }
 
+.ancor-hover {
+  transition: all linear 0.2s;
+}
+.ancor-hover:hover {
+  color: #0083ca;
+}
+
 .account-text:hover .account-details {
   opacity: 1;
   visibility: visible;
